@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard Bradesco - Gerenciamento de Automações</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -26,12 +26,12 @@
       
       <nav class="sidebar-nav">
         <ul>
-          <li class="active"><a href="#"><i class="fas fa-home"></i> Visão Geral</a></li>
-          <li><a href="#"><i class="fas fa-robot"></i> Automações</a></li>
-          <li><a href="#"><i class="fas fa-chart-line"></i> Métricas</a></li>
-          <li><a href="#"><i class="fas fa-history"></i> Logs</a></li>
-          <li><a href="#"><i class="fas fa-users"></i> Equipe</a></li>
-          <li><a href="#"><i class="fas fa-cog"></i> Configurações</a></li>
+          <li class="active"><a href="#"><i class="fas fa-home"></i> <span>Visão Geral</span></a></li>
+          <li><a href="#"><i class="fas fa-robot"></i> <span>Automações</span></a></li>
+          <li><a href="#"><i class="fas fa-chart-line"></i> <span>Métricas</span></a></li>
+          <li><a href="#"><i class="fas fa-history"></i> <span>Logs</span></a></li>
+          <li><a href="#"><i class="fas fa-users"></i> <span>Equipe</span></a></li>
+          <li><a href="#"><i class="fas fa-cog"></i> <span>Configurações</span></a></li>
         </ul>
       </nav>
       
@@ -82,7 +82,7 @@
         </div>
         
         <div class="stats-container">
-          <div class="stat-card">
+          <div class="stat-card shine-effect">
             <div class="stat-icon members-icon">
               <i class="fas fa-users"></i>
             </div>
@@ -91,9 +91,12 @@
               <p class="stat-value">12</p>
               <p class="stat-description">usuários ativos</p>
             </div>
+            <div class="stat-progress">
+              <div class="progress-bar" style="width: 75%;"></div>
+            </div>
           </div>
           
-          <div class="stat-card">
+          <div class="stat-card shine-effect">
             <div class="stat-icon automations-icon">
               <i class="fas fa-robot"></i>
             </div>
@@ -102,9 +105,12 @@
               <p class="stat-value">27</p>
               <p class="stat-description">total criadas</p>
             </div>
+            <div class="stat-progress">
+              <div class="progress-bar" style="width: 85%;"></div>
+            </div>
           </div>
           
-          <div class="stat-card">
+          <div class="stat-card shine-effect">
             <div class="stat-icon executions-icon">
               <i class="fas fa-play-circle"></i>
             </div>
@@ -113,9 +119,12 @@
               <p class="stat-value">120</p>
               <p class="stat-description">hoje</p>
             </div>
+            <div class="stat-progress">
+              <div class="progress-bar" style="width: 60%;"></div>
+            </div>
           </div>
           
-          <div class="stat-card">
+          <div class="stat-card shine-effect">
             <div class="stat-icon errors-icon">
               <i class="fas fa-exclamation-triangle"></i>
             </div>
@@ -124,28 +133,41 @@
               <p class="stat-value">3</p>
               <p class="stat-description">nas últimas 24h</p>
             </div>
+            <div class="stat-progress">
+              <div class="progress-bar" style="width: 15%;"></div>
+            </div>
           </div>
           
           <div class="stat-card large-card">
-            <div class="donut-chart-container">
-              <div class="chart-wrapper">
-                <div class="donut-chart">
-                  <div class="slice one"></div>
-                  <div class="slice two"></div>
-                  <div class="slice three"></div>
-                  <div class="chart-center">
-                    <span>27</span>
-                    <p>Total</p>
-                  </div>
+            <div class="modern-donut-container">
+              <div class="modern-donut-wrapper">
+                <h3>Status das Automações</h3>
+                <div class="modern-donut-chart">
+                  <svg viewBox="0 0 36 36" class="circular-chart">
+                    <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="circle inactive" stroke-dasharray="7.4, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="circle paused" stroke-dasharray="18.5, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="circle active" stroke-dasharray="74.1, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <text x="18" y="20.35" class="percentage">27</text>
+                  </svg>
                 </div>
               </div>
-              <div class="chart-legend">
-                <h3>Status das Automações</h3>
-                <ul>
-                  <li><span class="legend-dot active"></span> Ativas <span class="count">20</span></li>
-                  <li><span class="legend-dot paused"></span> Pausadas <span class="count">5</span></li>
-                  <li><span class="legend-dot inactive"></span> Inativas <span class="count">2</span></li>
-                </ul>
+              <div class="donut-legend">
+                <div class="legend-item">
+                  <span class="legend-color active"></span>
+                  <span class="legend-label">Ativas</span>
+                  <span class="legend-value">20</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-color paused"></span>
+                  <span class="legend-label">Pausadas</span>
+                  <span class="legend-value">5</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-color inactive"></span>
+                  <span class="legend-label">Inativas</span>
+                  <span class="legend-value">2</span>
+                </div>
               </div>
             </div>
           </div>
@@ -274,32 +296,52 @@
           </table>
         </div>
         
-        <div class="bar-chart-container">
+        <div class="modern-chart-container">
           <h3>Execuções Diárias por Automação</h3>
-          <div class="bar-chart">
-            <div class="bar-group">
-              <div class="bar-item" style="height: 46.875%;">
-                <div class="bar-value">15</div>
+          <div class="modern-bar-chart">
+            <div class="chart-entry">
+              <div class="entry-details">
+                <div class="entry-name">Envio de Notas Fiscais</div>
+                <div class="entry-value">15</div>
               </div>
-              <div class="bar-label">Envio de Notas Fiscais</div>
+              <div class="bar-container">
+                <div class="modern-bar" style="width: 46.875%">
+                  <div class="bar-shine"></div>
+                </div>
+              </div>
             </div>
-            <div class="bar-group">
-              <div class="bar-item" style="height: 100%;">
-                <div class="bar-value">32</div>
+            <div class="chart-entry">
+              <div class="entry-details">
+                <div class="entry-name">Consolidação de Faturas</div>
+                <div class="entry-value">32</div>
               </div>
-              <div class="bar-label">Consolidação de Faturas</div>
+              <div class="bar-container">
+                <div class="modern-bar" style="width: 100%">
+                  <div class="bar-shine"></div>
+                </div>
+              </div>
             </div>
-            <div class="bar-group">
-              <div class="bar-item" style="height: 0%;">
-                <div class="bar-value">0</div>
+            <div class="chart-entry">
+              <div class="entry-details">
+                <div class="entry-name">Coleta de Dados Bancários</div>
+                <div class="entry-value">0</div>
               </div>
-              <div class="bar-label">Coleta de Dados Bancários</div>
+              <div class="bar-container">
+                <div class="modern-bar" style="width: 0%">
+                  <div class="bar-shine"></div>
+                </div>
+              </div>
             </div>
-            <div class="bar-group">
-              <div class="bar-item" style="height: 62.5%;">
-                <div class="bar-value">20</div>
+            <div class="chart-entry">
+              <div class="entry-details">
+                <div class="entry-name">Notificações de Atraso</div>
+                <div class="entry-value">20</div>
               </div>
-              <div class="bar-label">Notificações de Atraso</div>
+              <div class="bar-container">
+                <div class="modern-bar" style="width: 62.5%">
+                  <div class="bar-shine"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -318,18 +360,18 @@
         </div>
         
         <div class="metrics-cards">
-          <div class="metric-card">
+          <div class="metric-card shine-effect">
             <div class="metric-icon">
               <i class="fas fa-tachometer-alt"></i>
             </div>
             <div class="metric-details">
               <h3>Total de Execuções</h3>
-              <p class="metric-value">120</p>
+              <p class="metric-value count-animation" data-count="120">0</p>
               <p class="metric-change positive">+15% <span>desde ontem</span></p>
             </div>
           </div>
           
-          <div class="metric-card">
+          <div class="metric-card shine-effect">
             <div class="metric-icon">
               <i class="fas fa-stopwatch"></i>
             </div>
@@ -340,80 +382,75 @@
             </div>
           </div>
           
-          <div class="metric-card">
+          <div class="metric-card shine-effect">
             <div class="metric-icon">
               <i class="fas fa-exclamation-circle"></i>
             </div>
             <div class="metric-details">
               <h3>Erros Hoje</h3>
-              <p class="metric-value">3</p>
+              <p class="metric-value count-animation" data-count="3">0</p>
               <p class="metric-change negative">+1 <span>desde ontem</span></p>
             </div>
           </div>
           
-          <div class="metric-card">
+          <div class="metric-card shine-effect">
             <div class="metric-icon">
               <i class="fas fa-clock"></i>
             </div>
             <div class="metric-details">
               <h3>Tempo Economizado</h3>
-              <p class="metric-value">45h</p>
+              <p class="metric-value count-animation" data-count="45">0</p>
               <p class="metric-change positive">+3h <span>desde semana passada</span></p>
             </div>
           </div>
         </div>
         
-        <div class="line-chart-container">
+        <div class="modern-line-chart-container">
           <h3>Tempo Médio de Execução (Últimos 7 dias)</h3>
-          <div class="line-chart">
-            <div class="chart-labels y-labels">
-              <span>5.0</span>
-              <span>4.5</span>
-              <span>4.0</span>
-              <span>3.5</span>
-              <span>3.0</span>
-            </div>
-            <div class="chart-grid">
-              <div class="grid-line"></div>
-              <div class="grid-line"></div>
-              <div class="grid-line"></div>
-              <div class="grid-line"></div>
-              <div class="grid-line"></div>
-              
-              <svg class="line-path" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path d="M0,10 L25,20 L50,6 L75,15 L100,10" fill="none" />
-                <path d="M0,10 L25,20 L50,6 L75,15 L100,10 L100,100 L0,100 Z" fill="url(#gradient)" fill-opacity="0.2" />
+          <div class="modern-line-chart">
+            <div class="line-chart-body">
+              <div class="line-chart-visualization">
+                <svg viewBox="0 0 800 300" class="chart-svg">
+                  <!-- Grid Lines -->
+                  <line class="grid-line" x1="0" y1="0" x2="800" y2="0"></line>
+                  <line class="grid-line" x1="0" y1="75" x2="800" y2="75"></line>
+                  <line class="grid-line" x1="0" y1="150" x2="800" y2="150"></line>
+                  <line class="grid-line" x1="0" y1="225" x2="800" y2="225"></line>
+                  <line class="grid-line" x1="0" y1="300" x2="800" y2="300"></line>
+                  
+                  <!-- Main Line Path -->
+                  <path class="line-path" d="M0,50 L160,100 L320,30 L480,75 L640,50 L800,80"></path>
+                  
+                  <!-- Area under the line -->
+                  <path class="area-path" d="M0,50 L160,100 L320,30 L480,75 L640,50 L800,80 L800,300 L0,300 Z"></path>
+                  
+                  <!-- Data Points -->
+                  <circle class="data-point" cx="0" cy="50" r="6"></circle>
+                  <circle class="data-point" cx="160" cy="100" r="6"></circle>
+                  <circle class="data-point" cx="320" cy="30" r="6"></circle>
+                  <circle class="data-point" cx="480" cy="75" r="6"></circle>
+                  <circle class="data-point" cx="640" cy="50" r="6"></circle>
+                  <circle class="data-point" cx="800" cy="80" r="6"></circle>
+                </svg>
                 
-                <defs>
-                  <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#CC092F" />
-                    <stop offset="100%" stop-color="#CC092F" stop-opacity="0" />
-                  </linearGradient>
-                </defs>
-              </svg>
-              
-              <div class="data-point" style="bottom: 90%; left: 0%;">
-                <div class="tooltip">01/03: 4.5min</div>
+                <!-- Data Labels -->
+                <div class="line-chart-labels x-labels">
+                  <span>01/03</span>
+                  <span>02/03</span>
+                  <span>03/03</span>
+                  <span>04/03</span>
+                  <span>05/03</span>
+                  <span>06/03</span>
+                </div>
+                
+                <div class="line-chart-labels y-labels">
+                  <span>5.0</span>
+                  <span>4.5</span>
+                  <span>4.0</span>
+                  <span>3.5</span>
+                  <span>3.0</span>
+                </div>
               </div>
-              <div class="data-point" style="bottom: 80%; left: 25%;">
-                <div class="tooltip">02/03: 4.8min</div>
-              </div>
-              <div class="data-point" style="bottom: 94%; left: 50%;">
-                <div class="tooltip">03/03: 4.3min</div>
-              </div>
-              <div class="data-point" style="bottom: 85%; left: 75%;">
-                <div class="tooltip">04/03: 4.7min</div>
-              </div>
-              <div class="data-point" style="bottom: 90%; left: 100%;">
-                <div class="tooltip">05/03: 4.5min</div>
-              </div>
-            </div>
-            <div class="chart-labels x-labels">
-              <span>01/03</span>
-              <span>02/03</span>
-              <span>03/03</span>
-              <span>04/03</span>
-              <span>05/03</span>
             </div>
           </div>
         </div>
@@ -474,15 +511,19 @@
           </table>
         </div>
         
-        <div class="pie-chart-container">
+        <div class="modern-pie-chart-container">
           <h3>Erros por Automação (Este mês)</h3>
-          <div class="pie-chart-wrapper">
-            <div class="pie-chart">
-              <div class="slice-1"></div>
-              <div class="slice-2"></div>
-              <div class="slice-3"></div>
+          <div class="modern-pie-wrapper">
+            <div class="modern-pie-chart">
+              <div class="pie-slice slice-1"></div>
+              <div class="pie-slice slice-2"></div>
+              <div class="pie-slice slice-3"></div>
+              <div class="pie-center">
+                <span>8</span>
+                <p>Total</p>
+              </div>
             </div>
-            <div class="pie-legend">
+            <div class="modern-pie-legend">
               <div class="legend-item">
                 <span class="legend-color color-1"></span>
                 <span class="legend-label">Consolidação de Faturas</span>
@@ -515,6 +556,7 @@
         
         <div class="team-cards">
           <div class="team-card">
+            <div class="card-glow"></div>
             <div class="team-member-avatar">
               <span>JS</span>
             </div>
@@ -537,6 +579,7 @@
           </div>
           
           <div class="team-card">
+            <div class="card-glow"></div>
             <div class="team-member-avatar">
               <span>AS</span>
             </div>
@@ -559,6 +602,7 @@
           </div>
           
           <div class="team-card">
+            <div class="card-glow"></div>
             <div class="team-member-avatar">
               <span>PL</span>
             </div>
@@ -588,27 +632,33 @@
           </div>
         </div>
         
-        <div class="horizontal-bar-chart">
+        <div class="modern-horizontal-chart">
           <h3>Novos Usuários Adicionados (Últimos 30 dias)</h3>
           <div class="h-bar-chart">
             <div class="h-bar-group">
               <div class="h-bar-label">01/03</div>
               <div class="h-bar-container">
-                <div class="h-bar" style="width: 66.7%;"></div>
+                <div class="h-bar-progress" style="width: 66.7%;">
+                  <div class="h-bar-shine"></div>
+                </div>
                 <span class="h-bar-value">2</span>
               </div>
             </div>
             <div class="h-bar-group">
               <div class="h-bar-label">02/03</div>
               <div class="h-bar-container">
-                <div class="h-bar" style="width: 33.3%;"></div>
+                <div class="h-bar-progress" style="width: 33.3%;">
+                  <div class="h-bar-shine"></div>
+                </div>
                 <span class="h-bar-value">1</span>
               </div>
             </div>
             <div class="h-bar-group">
               <div class="h-bar-label">03/03</div>
               <div class="h-bar-container">
-                <div class="h-bar" style="width: 100%;"></div>
+                <div class="h-bar-progress" style="width: 100%;">
+                  <div class="h-bar-shine"></div>
+                </div>
                 <span class="h-bar-value">3</span>
               </div>
             </div>
@@ -617,5 +667,32 @@
       </section>
     </main>
   </div>
+  
+  <script>
+    // Animate count numbers
+    document.addEventListener('DOMContentLoaded', function() {
+      const countElements = document.querySelectorAll('.count-animation');
+      
+      countElements.forEach(element => {
+        const target = parseInt(element.getAttribute('data-count'));
+        let count = 0;
+        const duration = 2000; // 2 seconds
+        const frameDuration = 1000 / 60; // 60fps
+        const totalFrames = Math.round(duration / frameDuration);
+        const increment = target / totalFrames;
+        
+        const timer = setInterval(() => {
+          count += increment;
+          
+          if(count >= target) {
+            element.textContent = target;
+            clearInterval(timer);
+          } else {
+            element.textContent = Math.floor(count);
+          }
+        }, frameDuration);
+      });
+    });
+  </script>
 </body>
 </html>
