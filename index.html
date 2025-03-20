@@ -2,620 +2,449 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard Bradesco - Gerenciamento de Automações</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Bradesco</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="dashboard">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="sidebar-header">
-        <div class="logo">
-          <svg width="40" height="40" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="80" height="80" rx="16" fill="#CC092F"/>
-            <path d="M20 40C20 28.954 28.954 20 40 20V60C28.954 60 20 51.046 20 40Z" fill="white"/>
-            <path d="M40 20C51.046 20 60 28.954 60 40C60 51.046 51.046 60 40 60V20Z" fill="white" fill-opacity="0.6"/>
-          </svg>
-          <span>Bradesco</span>
-        </div>
-      </div>
-      
-      <nav class="sidebar-nav">
-        <ul>
-          <li class="active"><a href="#"><i class="fas fa-home"></i> Visão Geral</a></li>
-          <li><a href="#"><i class="fas fa-robot"></i> Automações</a></li>
-          <li><a href="#"><i class="fas fa-chart-line"></i> Métricas</a></li>
-          <li><a href="#"><i class="fas fa-history"></i> Logs</a></li>
-          <li><a href="#"><i class="fas fa-users"></i> Equipe</a></li>
-          <li><a href="#"><i class="fas fa-cog"></i> Configurações</a></li>
-        </ul>
-      </nav>
-      
-      <div class="sidebar-footer">
-        <div class="user-info">
-          <div class="user-avatar">
-            <span>JS</span>
-          </div>
-          <div class="user-details">
-            <h4>João Silva</h4>
-            <p>Líder de Equipe</p>
-          </div>
-        </div>
-      </div>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="main-content">
-      <header class="top-bar">
-        <div class="page-title">
-          <h1>Dashboard de Automações</h1>
-          <p>ServiceNow | <span class="highlight">Equipe de Automação Financeira</span></p>
-        </div>
-        
-        <div class="header-actions">
-          <div class="search-container">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="Buscar automações...">
-          </div>
-          
-          <div class="notification-icon">
-            <i class="far fa-bell"></i>
-            <span class="badge">3</span>
-          </div>
-          
-          <button class="btn-primary">
-            <i class="fas fa-plus"></i>
-            Nova Automação
-          </button>
-        </div>
-      </header>
-
-      <!-- Section 1: Visão Geral da Equipe -->
-      <section class="overview-section">
-        <div class="section-header">
-          <h2>Visão Geral da Equipe</h2>
-          <span class="date">10 de Março, 2025</span>
-        </div>
-        
-        <div class="stats-container">
-          <div class="stat-card">
-            <div class="stat-icon members-icon">
-              <i class="fas fa-users"></i>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="https://www.bradesco.com.br/content/dam/bradesco/common/logos/bradesco-logo.svg" alt="Logo Bradesco">
             </div>
-            <div class="stat-details">
-              <h3>Membros</h3>
-              <p class="stat-value">12</p>
-              <p class="stat-description">usuários ativos</p>
-            </div>
-          </div>
-          
-          <div class="stat-card">
-            <div class="stat-icon automations-icon">
-              <i class="fas fa-robot"></i>
-            </div>
-            <div class="stat-details">
-              <h3>Automações</h3>
-              <p class="stat-value">27</p>
-              <p class="stat-description">total criadas</p>
-            </div>
-          </div>
-          
-          <div class="stat-card">
-            <div class="stat-icon executions-icon">
-              <i class="fas fa-play-circle"></i>
-            </div>
-            <div class="stat-details">
-              <h3>Execuções</h3>
-              <p class="stat-value">120</p>
-              <p class="stat-description">hoje</p>
-            </div>
-          </div>
-          
-          <div class="stat-card">
-            <div class="stat-icon errors-icon">
-              <i class="fas fa-exclamation-triangle"></i>
-            </div>
-            <div class="stat-details">
-              <h3>Erros</h3>
-              <p class="stat-value">3</p>
-              <p class="stat-description">nas últimas 24h</p>
-            </div>
-          </div>
-          
-          <div class="stat-card large-card">
-            <div class="donut-chart-container">
-              <div class="chart-wrapper">
-                <div class="donut-chart">
-                  <div class="slice one"></div>
-                  <div class="slice two"></div>
-                  <div class="slice three"></div>
-                  <div class="chart-center">
-                    <span>27</span>
-                    <p>Total</p>
-                  </div>
+            <div class="user-info">
+                <div class="user-avatar">JS</div>
+                <div class="user-details">
+                    <span class="user-name">João Silva</span>
+                    <span class="user-role">Líder de Equipe</span>
                 </div>
-              </div>
-              <div class="chart-legend">
-                <h3>Status das Automações</h3>
-                <ul>
-                  <li><span class="legend-dot active"></span> Ativas <span class="count">20</span></li>
-                  <li><span class="legend-dot paused"></span> Pausadas <span class="count">5</span></li>
-                  <li><span class="legend-dot inactive"></span> Inativas <span class="count">2</span></li>
-                </ul>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </header>
 
-      <!-- Section 2: Lista de Automações Ativas -->
-      <section class="automations-section">
-        <div class="section-header">
-          <h2>Automações Ativas</h2>
-          <div class="filter-options">
-            <span class="filter-label">Filtrar por:</span>
-            <div class="filter-pills">
-              <span class="pill active">Todas</span>
-              <span class="pill">Ativas</span>
-              <span class="pill">Pausadas</span>
-              <span class="pill">Inativas</span>
-            </div>
-          </div>
+        <!-- Dashboard Title -->
+        <div class="dashboard-title">
+            <h1>Dashboard de Automações</h1>
+            <p>Gerenciamento de Automações no ServiceNow</p>
         </div>
-        
-        <div class="table-container">
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>Nome da Automação</th>
-                <th>Criador</th>
-                <th>Status</th>
-                <th>Execuções/Dia</th>
-                <th>Tempo Médio</th>
-                <th>Última Execução</th>
-                <th>Erros Hoje</th>
-                <th>Ações</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="automation-name">
-                  <div class="automation-icon"><i class="fas fa-file-invoice"></i></div>
-                  <div class="automation-info">
-                    <p>Envio de Notas Fiscais</p>
-                    <span class="category">Financeiro</span>
-                  </div>
-                </td>
-                <td>João Silva</td>
-                <td><span class="status-badge active">Ativa</span></td>
-                <td>15</td>
-                <td>00:02:14</td>
-                <td>10/03/2025 12:34</td>
-                <td><span class="error-count success">0</span></td>
-                <td>
-                  <div class="action-buttons">
-                    <button class="action-btn"><i class="fas fa-play"></i></button>
-                    <button class="action-btn"><i class="fas fa-pencil-alt"></i></button>
-                    <button class="action-btn"><i class="fas fa-ellipsis-v"></i></button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="automation-name">
-                  <div class="automation-icon"><i class="fas fa-file-invoice-dollar"></i></div>
-                  <div class="automation-info">
-                    <p>Consolidação de Faturas</p>
-                    <span class="category">Financeiro</span>
-                  </div>
-                </td>
-                <td>Ana Souza</td>
-                <td><span class="status-badge active">Ativa</span></td>
-                <td>32</td>
-                <td>00:05:30</td>
-                <td>10/03/2025 12:45</td>
-                <td><span class="error-count warning">1</span></td>
-                <td>
-                  <div class="action-buttons">
-                    <button class="action-btn"><i class="fas fa-play"></i></button>
-                    <button class="action-btn"><i class="fas fa-pencil-alt"></i></button>
-                    <button class="action-btn"><i class="fas fa-ellipsis-v"></i></button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="automation-name">
-                  <div class="automation-icon"><i class="fas fa-university"></i></div>
-                  <div class="automation-info">
-                    <p>Coleta de Dados Bancários</p>
-                    <span class="category">Dados</span>
-                  </div>
-                </td>
-                <td>Pedro Lima</td>
-                <td><span class="status-badge inactive">Inativa</span></td>
-                <td>0</td>
-                <td>-</td>
-                <td>09/03/2025 18:22</td>
-                <td><span class="error-count success">0</span></td>
-                <td>
-                  <div class="action-buttons">
-                    <button class="action-btn"><i class="fas fa-play"></i></button>
-                    <button class="action-btn"><i class="fas fa-pencil-alt"></i></button>
-                    <button class="action-btn"><i class="fas fa-ellipsis-v"></i></button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="automation-name">
-                  <div class="automation-icon"><i class="fas fa-bell"></i></div>
-                  <div class="automation-info">
-                    <p>Notificações de Atraso</p>
-                    <span class="category">Alertas</span>
-                  </div>
-                </td>
-                <td>João Silva</td>
-                <td><span class="status-badge active">Ativa</span></td>
-                <td>20</td>
-                <td>00:03:12</td>
-                <td>10/03/2025 11:20</td>
-                <td><span class="error-count success">0</span></td>
-                <td>
-                  <div class="action-buttons">
-                    <button class="action-btn"><i class="fas fa-play"></i></button>
-                    <button class="action-btn"><i class="fas fa-pencil-alt"></i></button>
-                    <button class="action-btn"><i class="fas fa-ellipsis-v"></i></button>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        
-        <div class="bar-chart-container">
-          <h3>Execuções Diárias por Automação</h3>
-          <div class="bar-chart">
-            <div class="bar-group">
-              <div class="bar-item" style="height: 46.875%;">
-                <div class="bar-value">15</div>
-              </div>
-              <div class="bar-label">Envio de Notas Fiscais</div>
-            </div>
-            <div class="bar-group">
-              <div class="bar-item" style="height: 100%;">
-                <div class="bar-value">32</div>
-              </div>
-              <div class="bar-label">Consolidação de Faturas</div>
-            </div>
-            <div class="bar-group">
-              <div class="bar-item" style="height: 0%;">
-                <div class="bar-value">0</div>
-              </div>
-              <div class="bar-label">Coleta de Dados Bancários</div>
-            </div>
-            <div class="bar-group">
-              <div class="bar-item" style="height: 62.5%;">
-                <div class="bar-value">20</div>
-              </div>
-              <div class="bar-label">Notificações de Atraso</div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- Section 3: Métricas de Performance -->
-      <section class="metrics-section">
-        <div class="section-header">
-          <h2>Métricas de Performance</h2>
-          <div class="date-selector">
-            <button class="date-btn active">Hoje</button>
-            <button class="date-btn">Semana</button>
-            <button class="date-btn">Mês</button>
-            <button class="date-btn">Personalizado</button>
-          </div>
-        </div>
-        
-        <div class="metrics-cards">
-          <div class="metric-card">
-            <div class="metric-icon">
-              <i class="fas fa-tachometer-alt"></i>
-            </div>
-            <div class="metric-details">
-              <h3>Total de Execuções</h3>
-              <p class="metric-value">120</p>
-              <p class="metric-change positive">+15% <span>desde ontem</span></p>
-            </div>
-          </div>
-          
-          <div class="metric-card">
-            <div class="metric-icon">
-              <i class="fas fa-stopwatch"></i>
-            </div>
-            <div class="metric-details">
-              <h3>Tempo Médio</h3>
-              <p class="metric-value">00:04:32</p>
-              <p class="metric-change negative">+0.8s <span>desde ontem</span></p>
-            </div>
-          </div>
-          
-          <div class="metric-card">
-            <div class="metric-icon">
-              <i class="fas fa-exclamation-circle"></i>
-            </div>
-            <div class="metric-details">
-              <h3>Erros Hoje</h3>
-              <p class="metric-value">3</p>
-              <p class="metric-change negative">+1 <span>desde ontem</span></p>
-            </div>
-          </div>
-          
-          <div class="metric-card">
-            <div class="metric-icon">
-              <i class="fas fa-clock"></i>
-            </div>
-            <div class="metric-details">
-              <h3>Tempo Economizado</h3>
-              <p class="metric-value">45h</p>
-              <p class="metric-change positive">+3h <span>desde semana passada</span></p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="line-chart-container">
-          <h3>Tempo Médio de Execução (Últimos 7 dias)</h3>
-          <div class="line-chart">
-            <div class="chart-labels y-labels">
-              <span>5.0</span>
-              <span>4.5</span>
-              <span>4.0</span>
-              <span>3.5</span>
-              <span>3.0</span>
-            </div>
-            <div class="chart-grid">
-              <div class="grid-line"></div>
-              <div class="grid-line"></div>
-              <div class="grid-line"></div>
-              <div class="grid-line"></div>
-              <div class="grid-line"></div>
-              
-              <svg class="line-path" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path d="M0,10 L25,20 L50,6 L75,15 L100,10" fill="none" />
-                <path d="M0,10 L25,20 L50,6 L75,15 L100,10 L100,100 L0,100 Z" fill="url(#gradient)" fill-opacity="0.2" />
+        <!-- Section 1: Visão Geral da Equipe -->
+        <section class="overview-section">
+            <h2>Visão Geral da Equipe</h2>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-icon">👥</div>
+                    <div class="card-content">
+                        <div class="card-value"><span class="counter" data-target="12">0</span></div>
+                        <div class="card-title">Membros na Equipe</div>
+                    </div>
+                </div>
                 
-                <defs>
-                  <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#CC092F" />
-                    <stop offset="100%" stop-color="#CC092F" stop-opacity="0" />
-                  </linearGradient>
-                </defs>
-              </svg>
-              
-              <div class="data-point" style="bottom: 90%; left: 0%;">
-                <div class="tooltip">01/03: 4.5min</div>
-              </div>
-              <div class="data-point" style="bottom: 80%; left: 25%;">
-                <div class="tooltip">02/03: 4.8min</div>
-              </div>
-              <div class="data-point" style="bottom: 94%; left: 50%;">
-                <div class="tooltip">03/03: 4.3min</div>
-              </div>
-              <div class="data-point" style="bottom: 85%; left: 75%;">
-                <div class="tooltip">04/03: 4.7min</div>
-              </div>
-              <div class="data-point" style="bottom: 90%; left: 100%;">
-                <div class="tooltip">05/03: 4.5min</div>
-              </div>
-            </div>
-            <div class="chart-labels x-labels">
-              <span>01/03</span>
-              <span>02/03</span>
-              <span>03/03</span>
-              <span>04/03</span>
-              <span>05/03</span>
-            </div>
-          </div>
-        </div>
-      </section>
+                <div class="card">
+                    <div class="card-icon">🤖</div>
+                    <div class="card-content">
+                        <div class="card-value"><span class="counter" data-target="27">0</span></div>
+                        <div class="card-title">Automações Criadas</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">✅</div>
+                    <div class="card-content">
+                        <div class="card-value"><span class="counter" data-target="20">0</span></div>
+                        <div class="card-title">Automações Ativas</div>
+                    </div>
+                </div>
 
-      <!-- Section 4: Logs e Auditoria -->
-      <section class="logs-section">
-        <div class="section-header">
-          <h2>Logs e Auditoria</h2>
-          <button class="btn-secondary">
-            <i class="fas fa-download"></i>
-            Exportar Logs
-          </button>
-        </div>
-        
-        <div class="table-container">
-          <table class="data-table logs-table">
-            <thead>
-              <tr>
-                <th>Data</th>
-                <th>Automação</th>
-                <th>Usuário</th>
-                <th>Status</th>
-                <th>Tempo de Execução</th>
-                <th>Erro</th>
-                <th>Detalhes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>10/03/2025 12:34</td>
-                <td>Envio de Notas</td>
-                <td>João Silva</td>
-                <td><span class="status-badge active">Sucesso</span></td>
-                <td>00:02:14</td>
-                <td><span class="error-status success">Não</span></td>
-                <td><button class="btn-text">Ver detalhes</button></td>
-              </tr>
-              <tr>
-                <td>10/03/2025 12:45</td>
-                <td>Consolidação</td>
-                <td>Ana Souza</td>
-                <td><span class="status-badge error">Erro</span></td>
-                <td>00:05:30</td>
-                <td><span class="error-status error">Sim</span></td>
-                <td><button class="btn-text">Ver detalhes</button></td>
-              </tr>
-              <tr>
-                <td>09/03/2025 18:22</td>
-                <td>Coleta de Dados</td>
-                <td>Pedro Lima</td>
-                <td><span class="status-badge inactive">Falha</span></td>
-                <td>-</td>
-                <td><span class="error-status success">Não</span></td>
-                <td><button class="btn-text">Ver detalhes</button></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        
-        <div class="pie-chart-container">
-          <h3>Erros por Automação (Este mês)</h3>
-          <div class="pie-chart-wrapper">
-            <div class="pie-chart">
-              <div class="slice-1"></div>
-              <div class="slice-2"></div>
-              <div class="slice-3"></div>
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <div class="card-content">
+                        <div class="card-value"><span class="counter" data-target="120">0</span></div>
+                        <div class="card-title">Execuções Hoje</div>
+                    </div>
+                </div>
             </div>
-            <div class="pie-legend">
-              <div class="legend-item">
-                <span class="legend-color color-1"></span>
-                <span class="legend-label">Consolidação de Faturas</span>
-                <span class="legend-value">5</span>
-              </div>
-              <div class="legend-item">
-                <span class="legend-color color-2"></span>
-                <span class="legend-label">Envio de Notas</span>
-                <span class="legend-value">2</span>
-              </div>
-              <div class="legend-item">
-                <span class="legend-color color-3"></span>
-                <span class="legend-label">Notificações de Atraso</span>
-                <span class="legend-value">1</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- Section 5: Gerenciamento de Equipes -->
-      <section class="team-section">
-        <div class="section-header">
-          <h2>Gerenciamento de Equipes</h2>
-          <button class="btn-primary">
-            <i class="fas fa-user-plus"></i>
-            Adicionar Membro
-          </button>
-        </div>
+            <div class="chart-container">
+                <div class="chart-box">
+                    <h3>Automações por Status</h3>
+                    <div class="donut-chart-container">
+                        <div class="donut-chart">
+                            <svg width="200" height="200" viewBox="0 0 200 200">
+                                <circle class="donut-ring" cx="100" cy="100" r="80" fill="transparent" stroke="#e6e6e6" stroke-width="20"/>
+                                <circle class="donut-segment-ativas" cx="100" cy="100" r="80" fill="transparent" stroke="#4caf50" stroke-width="20" stroke-dasharray="502.4 0" stroke-dashoffset="0"/>
+                                <circle class="donut-segment-pausadas" cx="100" cy="100" r="80" fill="transparent" stroke="#FFC107" stroke-width="20" stroke-dasharray="125.6 377.0" stroke-dashoffset="0"/>
+                                <circle class="donut-segment-inativas" cx="100" cy="100" r="80" fill="transparent" stroke="#F44336" stroke-width="20" stroke-dasharray="50.2 452.2" stroke-dashoffset="-125.6"/>
+                                <text x="100" y="95" text-anchor="middle" class="donut-center-text">Status</text>
+                                <text x="100" y="115" text-anchor="middle" class="donut-center-subtext">27 Total</text>
+                            </svg>
+                        </div>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: #4caf50;"></span>
+                                <span class="legend-text">Ativas (20)</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: #FFC107;"></span>
+                                <span class="legend-text">Pausadas (5)</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: #F44336;"></span>
+                                <span class="legend-text">Inativas (2)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chart-box">
+                    <h3>Execuções Diárias por Automação</h3>
+                    <div class="bar-chart-container">
+                        <div class="bar-chart">
+                            <div class="bar-chart-y-axis">
+                                <span>40</span>
+                                <span>30</span>
+                                <span>20</span>
+                                <span>10</span>
+                                <span>0</span>
+                            </div>
+                            <div class="bar-chart-bars">
+                                <div class="bar-group">
+                                    <div class="bar" style="height: 15%;">
+                                        <div class="bar-tooltip">15</div>
+                                    </div>
+                                    <span class="bar-label">Notas Fiscais</span>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar" style="height: 32%;">
+                                        <div class="bar-tooltip">32</div>
+                                    </div>
+                                    <span class="bar-label">Consolidação</span>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar" style="height: 20%;">
+                                        <div class="bar-tooltip">20</div>
+                                    </div>
+                                    <span class="bar-label">Notificações</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Lista de Automações Ativas -->
+        <section class="automations-section">
+            <h2>Lista de Automações Ativas</h2>
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Nome da Automação</th>
+                            <th>Criador</th>
+                            <th>Status</th>
+                            <th>Execuções/Dia</th>
+                            <th>Tempo Médio</th>
+                            <th>Última Execução</th>
+                            <th>Erros Hoje</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Envio de Notas Fiscais</td>
+                            <td>João Silva</td>
+                            <td><span class="status-active">✅ Ativa</span></td>
+                            <td>15</td>
+                            <td>00:02:14</td>
+                            <td>10/03/2025 12:34</td>
+                            <td><span class="status-ok">0 ❌</span></td>
+                        </tr>
+                        <tr>
+                            <td>Consolidação de Faturas</td>
+                            <td>Ana Souza</td>
+                            <td><span class="status-active">✅ Ativa</span></td>
+                            <td>32</td>
+                            <td>00:05:30</td>
+                            <td>10/03/2025 12:45</td>
+                            <td><span class="status-warning">1 ⚠️</span></td>
+                        </tr>
+                        <tr>
+                            <td>Coleta de Dados Bancários</td>
+                            <td>Pedro Lima</td>
+                            <td><span class="status-inactive">❌ Inativa</span></td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>09/03/2025 18:22</td>
+                            <td><span class="status-ok">0 ❌</span></td>
+                        </tr>
+                        <tr>
+                            <td>Notificações de Atraso</td>
+                            <td>João Silva</td>
+                            <td><span class="status-active">✅ Ativa</span></td>
+                            <td>20</td>
+                            <td>00:03:12</td>
+                            <td>10/03/2025 11:20</td>
+                            <td><span class="status-ok">0 ❌</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 3: Métricas de Performance -->
+        <section class="metrics-section">
+            <h2>Métricas de Performance</h2>
+            
+            <div class="cards-container cards-small">
+                <div class="card">
+                    <div class="card-icon">🔄</div>
+                    <div class="card-content">
+                        <div class="card-value"><span class="counter" data-target="120">0</span></div>
+                        <div class="card-title">Execuções Hoje</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">⏱️</div>
+                    <div class="card-content">
+                        <div class="card-value">00:04:32</div>
+                        <div class="card-title">Média de Tempo</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">⚠️</div>
+                    <div class="card-content">
+                        <div class="card-value"><span class="counter" data-target="3">0</span></div>
+                        <div class="card-title">Erros Hoje</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⌛</div>
+                    <div class="card-content">
+                        <div class="card-value"><span class="counter" data-target="45">0</span> hrs</div>
+                        <div class="card-title">Tempo Economizado</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-box">
+                    <h3>Tempo Médio de Execução</h3>
+                    <div class="line-chart-container">
+                        <div class="line-chart">
+                            <svg width="100%" height="250" viewBox="0 0 500 250">
+                                <!-- Grid Lines -->
+                                <line class="chart-grid-line" x1="0" y1="50" x2="500" y2="50"></line>
+                                <line class="chart-grid-line" x1="0" y1="100" x2="500" y2="100"></line>
+                                <line class="chart-grid-line" x1="0" y1="150" x2="500" y2="150"></line>
+                                <line class="chart-grid-line" x1="0" y1="200" x2="500" y2="200"></line>
+                                
+                                <!-- Y-axis Labels -->
+                                <text x="10" y="50" class="chart-axis-label">5.0</text>
+                                <text x="10" y="100" class="chart-axis-label">4.5</text>
+                                <text x="10" y="150" class="chart-axis-label">4.0</text>
+                                <text x="10" y="200" class="chart-axis-label">3.5</text>
+                                
+                                <!-- X-axis Labels -->
+                                <text x="80" y="230" class="chart-axis-label">01/03</text>
+                                <text x="180" y="230" class="chart-axis-label">02/03</text>
+                                <text x="280" y="230" class="chart-axis-label">03/03</text>
+                                <text x="380" y="230" class="chart-axis-label">04/03</text>
+                                
+                                <!-- Data points -->
+                                <circle class="chart-data-point" cx="80" cy="100" r="5"></circle>
+                                <circle class="chart-data-point" cx="180" cy="80" r="5"></circle>
+                                <circle class="chart-data-point" cx="280" cy="120" r="5"></circle>
+                                <circle class="chart-data-point" cx="380" cy="90" r="5"></circle>
+                                
+                                <!-- Line connecting points -->
+                                <path class="chart-line" d="M80,100 L180,80 L280,120 L380,90"></path>
+                                
+                                <!-- Area under line -->
+                                <path class="chart-area" d="M80,100 L180,80 L280,120 L380,90 L380,250 L280,250 L180,250 L80,250 Z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chart-box">
+                    <h3>Erros por Automação</h3>
+                    <div class="pie-chart-container">
+                        <div class="pie-chart">
+                            <svg width="200" height="200" viewBox="0 0 200 200">
+                                <circle class="pie-chart-background" cx="100" cy="100" r="80" fill="#e6e6e6"/>
+                                
+                                <!-- Consolidação de Faturas: 5 erros (62.5%) -->
+                                <path class="pie-segment pie-segment-1" d="M100,100 L100,20 A80,80 0 0,1 174.6,143.5 Z" fill="#F44336"/>
+                                
+                                <!-- Envio de Notas: 2 erros (25%) -->
+                                <path class="pie-segment pie-segment-2" d="M100,100 L174.6,143.5 A80,80 0 0,1 131.7,174.6 Z" fill="#FFC107"/>
+                                
+                                <!-- Notificações de Atraso: 1 erro (12.5%) -->
+                                <path class="pie-segment pie-segment-3" d="M100,100 L131.7,174.6 A80,80 0 0,1 100,180 Z" fill="#4CAF50"/>
+                            </svg>
+                        </div>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: #F44336;"></span>
+                                <span class="legend-text">Consolidação (5 erros)</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: #FFC107;"></span>
+                                <span class="legend-text">Envio de Notas (2 erros)</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: #4CAF50;"></span>
+                                <span class="legend-text">Notificações (1 erro)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Logs e Auditoria -->
+        <section class="logs-section">
+            <h2>Logs e Auditoria</h2>
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Automação</th>
+                            <th>Usuário</th>
+                            <th>Status</th>
+                            <th>Tempo de Execução</th>
+                            <th>Erro?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10/03/2025 12:34</td>
+                            <td>Envio de Notas</td>
+                            <td>João Silva</td>
+                            <td><span class="status-active">✅ Sucesso</span></td>
+                            <td>00:02:14</td>
+                            <td><span class="status-ok">❌</span></td>
+                        </tr>
+                        <tr>
+                            <td>10/03/2025 12:45</td>
+                            <td>Consolidação</td>
+                            <td>Ana Souza</td>
+                            <td><span class="status-error">⚠️ Erro</span></td>
+                            <td>00:05:30</td>
+                            <td><span class="status-error">🛑 Sim</span></td>
+                        </tr>
+                        <tr>
+                            <td>09/03/2025 18:22</td>
+                            <td>Coleta de Dados</td>
+                            <td>Pedro Lima</td>
+                            <td><span class="status-inactive">❌ Falha</span></td>
+                            <td>-</td>
+                            <td><span class="status-ok">❌</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 5: Gerenciamento de Equipes -->
+        <section class="team-section">
+            <h2>Gerenciamento de Equipes e Permissões</h2>
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Cargo</th>
+                            <th>Status</th>
+                            <th>Última Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>João Silva</td>
+                            <td>Líder</td>
+                            <td><span class="status-active">✅ Ativo</span></td>
+                            <td>10/03/2025</td>
+                        </tr>
+                        <tr>
+                            <td>Ana Souza</td>
+                            <td>Analista</td>
+                            <td><span class="status-active">✅ Ativo</span></td>
+                            <td>10/03/2025</td>
+                        </tr>
+                        <tr>
+                            <td>Pedro Lima</td>
+                            <td>Dev</td>
+                            <td><span class="status-active">✅ Ativo</span></td>
+                            <td>09/03/2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-box">
+                    <h3>Novos Usuários Adicionados</h3>
+                    <div class="horizontal-bar-chart">
+                        <div class="horizontal-bar-item">
+                            <span class="horizontal-bar-label">01/03</span>
+                            <div class="horizontal-bar-track">
+                                <div class="horizontal-bar-fill" style="width: 66.7%;" data-value="2"></div>
+                            </div>
+                            <span class="horizontal-bar-value">2</span>
+                        </div>
+                        <div class="horizontal-bar-item">
+                            <span class="horizontal-bar-label">02/03</span>
+                            <div class="horizontal-bar-track">
+                                <div class="horizontal-bar-fill" style="width: 33.3%;" data-value="1"></div>
+                            </div>
+                            <span class="horizontal-bar-value">1</span>
+                        </div>
+                        <div class="horizontal-bar-item">
+                            <span class="horizontal-bar-label">03/03</span>
+                            <div class="horizontal-bar-track">
+                                <div class="horizontal-bar-fill" style="width: 100%;" data-value="3"></div>
+                            </div>
+                            <span class="horizontal-bar-value">3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Dashboard de Automações Bradesco © 2025</p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for counters
+        const counters = document.querySelectorAll('.counter');
         
-        <div class="team-cards">
-          <div class="team-card">
-            <div class="team-member-avatar">
-              <span>JS</span>
-            </div>
-            <div class="team-member-info">
-              <h4>João Silva</h4>
-              <p class="role">Líder</p>
-              <p class="status active">Ativo</p>
-              <p class="last-action">Última ação: 10/03/2025</p>
-              <div class="member-stats">
-                <div class="stat">
-                  <span class="stat-value">12</span>
-                  <span class="stat-label">Automações</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-value">45</span>
-                  <span class="stat-label">Execuções</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="team-card">
-            <div class="team-member-avatar">
-              <span>AS</span>
-            </div>
-            <div class="team-member-info">
-              <h4>Ana Souza</h4>
-              <p class="role">Analista</p>
-              <p class="status active">Ativo</p>
-              <p class="last-action">Última ação: 10/03/2025</p>
-              <div class="member-stats">
-                <div class="stat">
-                  <span class="stat-value">8</span>
-                  <span class="stat-label">Automações</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-value">27</span>
-                  <span class="stat-label">Execuções</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="team-card">
-            <div class="team-member-avatar">
-              <span>PL</span>
-            </div>
-            <div class="team-member-info">
-              <h4>Pedro Lima</h4>
-              <p class="role">Dev</p>
-              <p class="status active">Ativo</p>
-              <p class="last-action">Última ação: 09/03/2025</p>
-              <div class="member-stats">
-                <div class="stat">
-                  <span class="stat-value">7</span>
-                  <span class="stat-label">Automações</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-value">18</span>
-                  <span class="stat-label">Execuções</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="team-card add-card">
-            <div class="add-member-icon">
-              <i class="fas fa-plus"></i>
-            </div>
-            <p>Adicionar Novo Membro</p>
-          </div>
-        </div>
-        
-        <div class="horizontal-bar-chart">
-          <h3>Novos Usuários Adicionados (Últimos 30 dias)</h3>
-          <div class="h-bar-chart">
-            <div class="h-bar-group">
-              <div class="h-bar-label">01/03</div>
-              <div class="h-bar-container">
-                <div class="h-bar" style="width: 66.7%;"></div>
-                <span class="h-bar-value">2</span>
-              </div>
-            </div>
-            <div class="h-bar-group">
-              <div class="h-bar-label">02/03</div>
-              <div class="h-bar-container">
-                <div class="h-bar" style="width: 33.3%;"></div>
-                <span class="h-bar-value">1</span>
-              </div>
-            </div>
-            <div class="h-bar-group">
-              <div class="h-bar-label">03/03</div>
-              <div class="h-bar-container">
-                <div class="h-bar" style="width: 100%;"></div>
-                <span class="h-bar-value">3</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
+        counters.forEach(counter => {
+            const target = +counter.dataset.target;
+            const increment = Math.ceil(target / 50);
+            let currentCount = 0;
+            
+            const updateCounter = () => {
+                if(currentCount < target) {
+                    currentCount += increment;
+                    if(currentCount > target) currentCount = target;
+                    counter.innerText = currentCount;
+                    setTimeout(updateCounter, 30);
+                }
+            }
+            
+            updateCounter();
+        });
+    </script>
 </body>
 </html>
